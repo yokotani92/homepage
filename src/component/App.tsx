@@ -1,14 +1,17 @@
-import * as React from 'react';
-import Counter from './Counter';
-import { CssBaseline, createMuiTheme, ThemeProvider, useMediaQuery } from "@material-ui/core";
+import React from 'react';
+import Header from './Header';
+import Main from './Main';
+import { CssBaseline, createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { lightBlue, pink } from '@material-ui/core/colors';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/reducers';
 
 const App: React.FC = () => {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const isDarktheme = useSelector<RootState, boolean>(state => state.toggleTheme.isDarktheme);
 
   const theme = createMuiTheme({
     palette: {
-      type: prefersDarkMode ? 'dark' : 'light',
+      type: isDarktheme ? 'dark' : 'light',
       primary: {
         main: lightBlue.A400,
       },
@@ -21,7 +24,8 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Counter />
+      <Header />
+      <Main />
     </ThemeProvider>
   );
 };

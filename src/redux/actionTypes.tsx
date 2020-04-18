@@ -1,12 +1,7 @@
-export const INCREMENT = "INCREMENT";
-export const DECREMENT = "DECREMENT";
+export const TOGGLE_THEME = "TOGGLE_THEME";
 
-interface IncrementAction {
-    type: typeof INCREMENT,
+interface ToggleThemeAction {
+    type: typeof TOGGLE_THEME,
 };
 
-interface DecrementAction {
-    type: typeof DECREMENT,
-};
-
-export type CounterActionTypes = IncrementAction | DecrementAction;
+export type ToggleThemeTypes = ToggleThemeAction;

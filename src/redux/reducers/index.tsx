@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
+import toggleTheme from './toggleTheme';
 
-export const rootReducer = combineReducers({ counter: counter });
+export const rootReducer = combineReducers({ toggleTheme: toggleTheme });
 export type RootState = ReturnType<typeof rootReducer>
