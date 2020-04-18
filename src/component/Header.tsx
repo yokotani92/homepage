@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const Header = () => {
+const Header: React.FC = () => {
     const isDarktheme = useSelector<RootState, boolean>(state => state.toggleTheme.isDarktheme);
     const dispatch = useDispatch();
 
@@ -33,6 +33,7 @@ const Header = () => {
                 />
             </div>
             <h1>こんにちは</h1>
+            <p>これから色々書いていく予定</p>
         </div>
     );
 }
