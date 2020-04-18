@@ -44,7 +44,7 @@ const MyWork: React.FC = () => {
             <Card className={classes.root}>
                 <CardContent>
                     <Typography className={classes.title} variant="h5" component="h2">
-                        DP Visualizer
+                        React-Reduxのstarter
                     </Typography>
                     <Typography className={classes.content} variant="body2" component="p">
                         React-Reduxを使ったCount up/ downボタン。
