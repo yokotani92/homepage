@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import Main from './Main';
 import { CssBaseline, createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { lightBlue, pink } from '@material-ui/core/colors';
@@ -24,7 +23,6 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header />
       <Main />
     </ThemeProvider>
   );

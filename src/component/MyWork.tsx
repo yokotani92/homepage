@@ -4,11 +4,12 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-        width: '95%',
+        width: '100%',
         textAlign: 'left',
         marginBottom: 14,
     },
@@ -36,9 +37,9 @@ const MyWork: React.FC = () => {
                 </Typography>
                 </CardContent>
                 <CardActions>
-                    <a href="https://yokotani92.github.io/dp-visualizer/">
+                    <Link href="https://yokotani92.github.io/dp-visualizer/" underline='none'>
                         <Button size="small">VIEW</Button>
-                    </a>
+                    </Link>
                 </CardActions>
             </Card>
             <Card className={classes.root}>
@@ -51,12 +52,12 @@ const MyWork: React.FC = () => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <a href="https://yokotani92.github.io/react-redux-starter-app/">
+                    <Link href="https://yokotani92.github.io/react-redux-starter-app/" underline='none'>
                         <Button size="small">VIEW</Button>
-                    </a>
+                    </Link>
                 </CardActions>
             </Card>
-        </div>
+        </div >
     );
 }
 
