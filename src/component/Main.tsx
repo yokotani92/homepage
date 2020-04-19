@@ -10,13 +10,14 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import StarIcon from '@material-ui/icons/Star';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
 import MyWork from './MyWork';
 import ThemeSwitch from './ThemeSwitch';
+import Link from '@material-ui/core/Link';
 
 const drawerWidth = 240;
 
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         appBar: {
             color: 'inherit',
-            backgroundColor: 'inherit',
+            backgroundColor: 'default',
             [theme.breakpoints.up('sm')]: {
                 width: `calc(100% - ${drawerWidth}px)`,
                 marginLeft: drawerWidth,
@@ -80,12 +81,21 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             <div className={classes.toolbar} />
             <Divider />
             <List>
-                {['Favorite', 'About Me'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <StarIcon /> : <AccountBoxIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+                <Link href="https://github.com/yokotani92" underline='none' color='inherit'>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <GitHubIcon />
+                        </ListItemIcon>
+                        <ListItemText primary='GitHub' />
                     </ListItem>
-                ))}
+                </Link>
+
+                <ListItem button>
+                    <ListItemIcon>
+                        <AccountBoxIcon />
+                    </ListItemIcon>
+                    <ListItemText primary='About Me' />
+                </ListItem>
             </List>
             <ThemeSwitch />
         </div>

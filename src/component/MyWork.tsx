@@ -57,6 +57,21 @@ const MyWork: React.FC = () => {
                     </Link>
                 </CardActions>
             </Card>
+            <Card className={classes.root}>
+                <CardContent>
+                    <Typography className={classes.title} variant="h5" component="h2">
+                        react-three-fiberを使ったページのテスト
+                    </Typography>
+                    <Typography className={classes.content} variant="body2" component="p">
+                        react-three-fiberのサンプルを動かしてみただけ。面白い。
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Link href="https://yokotani92.github.io/react-three-trial/" underline='none'>
+                        <Button size="small">VIEW</Button>
+                    </Link>
+                </CardActions>
+            </Card>
         </div >
     );
 }
