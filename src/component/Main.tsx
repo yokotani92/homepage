@@ -12,6 +12,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
@@ -89,15 +90,19 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
                         <ListItemText primary='GitHub' />
                     </ListItem>
                 </Link>
-
                 <ListItem button>
                     <ListItemIcon>
                         <AccountBoxIcon />
                     </ListItemIcon>
                     <ListItemText primary='About Me' />
                 </ListItem>
+                <ListItem >
+                    <ListItemIcon>
+                        <WbIncandescentIcon />
+                    </ListItemIcon>
+                    <ThemeSwitch />
+                </ListItem>
             </List>
-            <ThemeSwitch />
         </div>
     );
 

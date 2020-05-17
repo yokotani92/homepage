@@ -8,7 +8,7 @@ import { toggleTheme } from '../redux/actions';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         switch: {
-            textAlign: 'right',
+            textAlign: 'left',
             display: 'inline-block'
         },
     }),
