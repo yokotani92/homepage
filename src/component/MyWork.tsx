@@ -30,14 +30,14 @@ const MyWork: React.FC = () => {
             <Card className={classes.root}>
                 <CardContent>
                     <Typography className={classes.title} variant="h5" component="h2">
-                        react-three-fiberのギャラリー
+                        react-three-fiberで作成したグラフィックのギャラリー
                     </Typography>
                     <Typography className={classes.content} variant="body2" component="p">
-                        react-three-fiberで作成したもののギャラリー。
+                        react-three-fiberで作成したグラフィックのギャラリー。
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Link href="https://yokotani92.github.io/react-three-fiber-starter/" underline='none'>
+                    <Link href="https://yokotani92.github.io/react-three-fiber-gallery/" underline='none'>
                         <Button size="small">VIEW</Button>
                     </Link>
                 </CardActions>
